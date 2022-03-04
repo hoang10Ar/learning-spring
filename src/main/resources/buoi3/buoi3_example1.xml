@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="beanID" class="java.lang.String">
+        <constructor-arg value="Get bean by id"/>
+    </bean>
+
+    <bean name="beanName" class="java.lang.String">
+        <constructor-arg value="Get bean by name"/>
+    </bean>
+
+    <bean id="beanIDNotName" name="beanNameNotID" class="java.lang.String">
+        <constructor-arg value="Get bean by id or name"/>
+    </bean>
+
+    <bean id="beanID1 beanID2" name="beanName1 beanName2" class="java.lang.String">
+        <constructor-arg value="Get bean has multiple names"/>
+    </bean>
+
+    <context:component-scan base-package="com.mycompany.hoang.buoi3.example1"/>
+</beans>

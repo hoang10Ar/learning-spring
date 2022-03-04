@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="sword" class="com.mycompany.hoang.buoi2.example1.Sword"/>
+
+    <bean id="knight_sword" class="com.mycompany.hoang.buoi2.Knight">
+        <property name="name" value="Ariana"/>
+        <property name="weapon" ref="sword"/>
+    </bean>
+
+    <bean id="knight_unique_sword" class="com.mycompany.hoang.buoi2.Knight">
+        <property name="name" value="Ariana"/>
+        <property name="weapon">
+            <bean class="com.mycompany.hoang.buoi2.example1.Sword"/>
+        </property>
+    </bean>
+</beans>
